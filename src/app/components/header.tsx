@@ -1,12 +1,17 @@
-import Image from "next/image";
+import LoginIcon from "@mui/icons-material/Login";
+import Link from "next/link";
 
 export default function AppHeader() {
   return (
     <header className="app-header flex-between">
-      <h1>TAROT FOR LOVE</h1>
+      <h1>
+        <Link href="/">TAROT FOR LOVE</Link>
+      </h1>
       <ul>
         <li>
-          <a href="/auth/signin">로그인</a>
+          <Link href="/auth/signin" className="signin-btn">
+            <LoginIcon />
+          </Link>
         </li>
       </ul>
     </header>
