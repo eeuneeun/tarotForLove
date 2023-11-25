@@ -27,6 +27,11 @@ type FormValues = {
   lastName: string;
 };
 
+// export const metadata: Metadata = {
+//   title: "Login | Tarot For Love",
+//   description: "로그인 페이지 입니다.",
+// };
+
 const resolver: Resolver<FormValues> = async (values) => {
   return {
     values: values.firstName ? values : {},

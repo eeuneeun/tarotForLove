@@ -21,11 +21,17 @@ import LoginIcon from "@mui/icons-material/Login";
 import PersonAddIcon from "@mui/icons-material/PersonAdd";
 import AppFooter from "../../components/footer";
 import AppHeader from "../../components/header";
+import { Metadata } from "next";
 
 type FormValues = {
   firstName: string;
   lastName: string;
 };
+
+// export const metadata: Metadata = {
+//   title: "Signup | Tarot For Love",
+//   description: "회원가입 페이지 입니다.",
+// };
 
 const resolver: Resolver<FormValues> = async (values) => {
   return {
