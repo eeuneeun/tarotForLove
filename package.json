@@ -2,11 +2,11 @@
   "name": "tarot",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://eeuneeun.github.io/tarotForLove/",
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "build": "next build",
+    "deploy": "touch out/.nojekyll && gh-pages -d out --dotfiles",
     "start": "next start",
     "lint": "next lint"
   },
