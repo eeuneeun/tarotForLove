@@ -48,6 +48,7 @@ const resolver: Resolver<FormValues> = async (values) => {
 };
 
 export default function Tarot() {
+  const imgNum = Math.floor(Math.random() * (3 - 1) + 1);
   return (
     <>
       <AppHeader />
@@ -56,7 +57,7 @@ export default function Tarot() {
           <h2>오늘의 타로 카드</h2>
           <div className="img-wrap">
             <Image
-              src={"/images/tarot_back/back_01.png"}
+              src={`/images/tarot_back/back_0${imgNum}.png`}
               fill={true}
               className="img-contain"
               alt="타로 덱"
