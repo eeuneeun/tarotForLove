@@ -4,8 +4,8 @@ import { use, useState } from "react";
 import { useForm, Resolver } from "react-hook-form";
 import { useRouter } from "next/navigation";
 
-import AppFooter from "../components/footer";
-import AppHeader from "../components/header";
+import AppFooter from "../components/AppFooter";
+import AppHeader from "../components/AppHeader";
 import Image from "next/image";
 import { prefix } from "../config/config";
 

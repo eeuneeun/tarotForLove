@@ -19,8 +19,8 @@ import Visibility from "@mui/icons-material/Visibility";
 import VisibilityOff from "@mui/icons-material/VisibilityOff";
 import LoginIcon from "@mui/icons-material/Login";
 import PersonAddIcon from "@mui/icons-material/PersonAdd";
-import AppFooter from "../../components/footer";
-import AppHeader from "../../components/header";
+import AppFooter from "../../components/AppFooter";
+import AppHeader from "../../components/AppHeader";
 import { Metadata } from "next";
 
 type FormValues = {
