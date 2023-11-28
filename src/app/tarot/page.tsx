@@ -4,13 +4,6 @@ import { use, useState } from "react";
 import { useForm, Resolver } from "react-hook-form";
 import { useRouter } from "next/navigation";
 
-import { prefix } from "../config/config.js";
-
-import IconButton from "@mui/material/IconButton";
-import Visibility from "@mui/icons-material/Visibility";
-import VisibilityOff from "@mui/icons-material/VisibilityOff";
-import LoginIcon from "@mui/icons-material/Login";
-import PersonAddIcon from "@mui/icons-material/PersonAdd";
 import AppFooter from "../components/footer";
 import AppHeader from "../components/header";
 import Image from "next/image";
@@ -25,22 +18,40 @@ type FormValues = {
 //   description: "로그인 페이지 입니다.",
 // };
 
-const resolver: Resolver<FormValues> = async (values) => {
-  return {
-    values: values.firstName ? values : {},
-    errors: !values.firstName
-      ? {
-          firstName: {
-            type: "required",
-            message: "This is required.",
-          },
-        }
-      : {},
-  };
-};
+const tarotCardName = [
+  "fool",
+  "magician",
+  "high_priestess",
+  "emperess",
+  "emperor",
+  "hierophant",
+  "lovers",
+  "chariot",
+  "strength",
+  "hermit",
+  "wheel_fortune",
+  "justice",
+  "hanged_man",
+  "death",
+  "temperance",
+  "devil",
+  "tower",
+  "star",
+  "moon",
+  "sun",
+  "judgement",
+  "world",
+];
 
 export default function Tarot() {
+  const router = useRouter();
+
   const imgNum = Math.floor(Math.random() * (3 - 1) + 1);
+  const imgName = tarotCardName[Math.floor(Math.random() * (23 - 1) + 1)];
+  console.log(imgNum);
+
+  const [isActive, setIsActive] = useState(false);
+
   return (
     <>
       <AppHeader />
@@ -48,11 +59,29 @@ export default function Tarot() {
         <section>
           <h2>오늘의 타로 카드</h2>
           <div className="img-wrap">
-            <Image
+            {/* <Image
               src={`${prefix}/images/tarot_back/back_0${imgNum}.png`}
               fill={true}
               className="img-contain"
               alt="타로 덱"
+            /> */}
+            <img
+              src={`/images/tarot_back/back_0${imgNum}.png`}
+              className={`tarot-deck img-contain ${
+                isActive === true ? "none" : ""
+              }`}
+              alt="타로 덱"
+              onClick={() => {
+                setIsActive(true);
+              }} //숨겨진 타로 결과 보여주기
+            />
+            <img
+              src={`/images/tarot_major/${imgName}.png`}
+              className={`tarot-major img-contain ${
+                isActive === true ? "active" : ""
+              }`}
+              alt="타로 덱"
+              onClick={() => {}} //결과에 따른 데이트 장소 추천 페이지로 이동
             />
           </div>
         </section>
@@ -83,15 +112,8 @@ export default function Tarot() {
           margin: 0 auto;
         }
 
-        .img-wrap::after {
-          display: inline-block;
-          content: "";
-          width: 100%;
-          height: 100%;
-          position: absolute;
-          left: 0;
-          top: 0;
-          box-shadow: 5px 5px 5px 5px #000;
+        .tarot-major {
+          display: none;
         }
       `}</style>
     </>

@@ -37,6 +37,14 @@ body {
 }
 
 /* PRE FIX CLASSES */
+/* VISIBILLITY */
+.active {
+  display: block !important;
+}
+.none {
+  display: none !important;
+}
+
 /* IMG */
 .img-contain {
   object-fit: contain;
@@ -130,4 +138,11 @@ h2::after {
 /* AUTH */
 form .btn-wrap {
   padding-top: 20px;
+}
+
+/* TAROT */
+.tarot-deck,
+.tarot-major {
+  max-width: 700px;
+  width: 100%;
 }
