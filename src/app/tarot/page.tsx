@@ -7,6 +7,7 @@ import { useRouter } from "next/navigation";
 import AppFooter from "../components/footer";
 import AppHeader from "../components/header";
 import Image from "next/image";
+import { prefix } from "../config/config";
 
 type FormValues = {
   firstName: string;
@@ -66,7 +67,7 @@ export default function Tarot() {
               alt="타로 덱"
             /> */}
             <img
-              src={`/images/tarot_back/back_0${imgNum}.png`}
+              src={`${prefix}/images/tarot_back/back_0${imgNum}.png`}
               className={`tarot-deck img-contain ${
                 isActive === true ? "none" : ""
               }`}
@@ -76,7 +77,7 @@ export default function Tarot() {
               }} //숨겨진 타로 결과 보여주기
             />
             <img
-              src={`/images/tarot_major/${imgName}.png`}
+              src={`${prefix}/images/tarot_major/${imgName}.png`}
               className={`tarot-major img-contain ${
                 isActive === true ? "active" : ""
               }`}

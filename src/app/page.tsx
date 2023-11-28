@@ -20,14 +20,11 @@ import CardGiftcardIcon from "@mui/icons-material/CardGiftcard";
 
 export default function Home() {
   const router = useRouter();
+  console.log("prefix : ", prefix);
+
   return (
     <>
       <AppHeader />
-      <ul className="gnb flex-center">
-        <li>오늘의 질문</li>
-        <li>오늘의 타로</li>
-        <li>오늘의 데이트 코스</li>
-      </ul>
       <main className="flex min-h-screen flex-col items-center flex-start p-24">
         <section className="day-counter">
           <h2>처음 만난 날 200일째</h2>
