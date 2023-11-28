@@ -4,15 +4,7 @@ import { use, useState } from "react";
 import { useForm, Resolver } from "react-hook-form";
 import { useRouter } from "next/navigation";
 
-import {
-  TextField,
-  Input,
-  FormControl,
-  InputLabel,
-  InputAdornment,
-  Button,
-  Stack,
-} from "@mui/material";
+import { prefix } from "../config/config.js";
 
 import IconButton from "@mui/material/IconButton";
 import Visibility from "@mui/icons-material/Visibility";
@@ -57,7 +49,7 @@ export default function Tarot() {
           <h2>오늘의 타로 카드</h2>
           <div className="img-wrap">
             <Image
-              src={`/images/tarot_back/back_0${imgNum}.png`}
+              src={`${prefix}/images/tarot_back/back_0${imgNum}.png`}
               fill={true}
               className="img-contain"
               alt="타로 덱"

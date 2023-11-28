@@ -1,7 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export",
-  basePath: "https://eeuneeun.github.io/tarotForLove",
+  basePath: "/tarotForLove",
 };
 
 module.exports = nextConfig;

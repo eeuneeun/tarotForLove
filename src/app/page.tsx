@@ -4,6 +4,9 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 
+// * 상수 선언부 */
+import { prefix } from "./config/config";
+
 import AppHeader from "./components/header";
 import AppFooter from "./components/footer";
 

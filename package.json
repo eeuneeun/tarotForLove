@@ -2,7 +2,7 @@
   "name": "tarot",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://eeuneeun.github.io/tarotForLove/",
+  "homepage": "http://eeuneeun.github.io/tarotForLove",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
