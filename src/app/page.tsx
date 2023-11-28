@@ -116,7 +116,8 @@ export default function Home() {
           position: absolute;
           left: 0;
           top: 0;
-          background: url("/images/couple_main_bg.jpg") no-repeat center;
+          background: url("${prefix}/images/couple_main_bg.jpg") no-repeat
+            center;
           opacity: 0.5;
           z-index: -1;
         }
@@ -146,7 +147,6 @@ export default function Home() {
           width: 300px;
         }
       `}</style>
-      ;
     </>
   );
 }
