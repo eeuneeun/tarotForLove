@@ -68,6 +68,9 @@ body {
 .flex-col {
   flex-direction: column;
 }
+.gap-10 {
+  gap: 10px;
+}
 
 /* BOX LAYOUT */
 .panel {
@@ -78,7 +81,7 @@ body {
 /* COMMON DESIGN SETTINGS */
 main {
   width: 100%;
-  height: 100%;
+  height: calc(100% - 70px);
   padding: 0;
 }
 main > section {
@@ -106,7 +109,7 @@ h2::after {
 /* HEADER */
 .app-header {
   width: 100%;
-  height: 50px;
+  height: 70px;
   color: #fff;
   padding: 0 20px;
   position: relative;
@@ -175,4 +178,38 @@ form .btn-wrap {
 .tarot-major {
   max-width: 700px;
   width: 100%;
+  height: 100%;
+}
+
+.tarot section {
+  width: 100%;
+  height: 100%;
+}
+
+.tarot h2 {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  padding-bottom: 20px;
+}
+.tarot h2::after {
+  display: none;
+}
+
+.tarot .img-wrap {
+  position: relative;
+  width: 90%;
+  height: 90%;
+  margin: 0 auto;
+}
+
+.tarot .tarot-major {
+  display: none;
+}
+
+/* QUESTION */
+.question > section {
+  gap: 50px;
 }

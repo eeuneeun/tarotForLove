@@ -13,24 +13,38 @@
   "dependencies": {
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
+    "@fontsource/inter": "^5.0.15",
     "@fontsource/roboto": "^5.0.8",
     "@mui/icons-material": "^5.14.18",
+    "@mui/joy": "^5.0.0-beta.16",
     "@mui/material": "^5.14.18",
+    "fs": "^0.0.1-security",
+    "mariadb": "^3.2.2",
+    "mysql": "^2.18.1",
+    "net": "^1.0.2",
     "next": "14.0.3",
     "react": "^18",
     "react-dom": "^18",
-    "react-hook-form": "^7.48.2"
+    "react-hook-form": "^7.48.2",
+    "tls": "^0.0.1",
+    "webpack-filter-warnings-plugin": "^1.2.1"
   },
   "devDependencies": {
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "autoprefixer": "^10.4.16",
+    "babel-plugin-styled-components": "^2.1.4",
     "eslint": "^8",
     "eslint-config-next": "14.0.3",
     "gh-pages": "^6.1.0",
     "postcss": "^8.4.31",
     "tailwindcss": "^3.3.5",
     "typescript": "^5"
+  },
+  "browser": {
+    "tls": false,
+    "net": false,
+    "fs": false
   }
 }

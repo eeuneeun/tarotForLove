@@ -140,16 +140,28 @@ body {
 .flex-center {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
 }
 .flex-col-center {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   flex-direction: column;
 }
 .flex-hoz-right {
   justify-content: flex-end !important;
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-around {
+  justify-content: space-around;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.justify-evenly {
+  justify-content: space-evenly;
 }
 .flex-between {
   width: 100%;
@@ -160,7 +172,6 @@ body {
 .flex-item {
   align-self: center;
 }
-
 .inner {
   max-width: 650px;
   margin: 0 auto;

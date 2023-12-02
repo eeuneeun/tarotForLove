@@ -7,9 +7,6 @@ import { useRouter } from "next/navigation";
 // * 상수 선언부 */
 import { prefix } from "./config/config";
 
-import AppHeader from "./components/AppHeader";
-import AppFooter from "./components/AppFooter";
-
 import { Button } from "@mui/material";
 import LoyaltyIcon from "@mui/icons-material/Loyalty";
 import CardGiftcardIcon from "@mui/icons-material/CardGiftcard";
@@ -25,7 +22,6 @@ export default function Home() {
 
   return (
     <>
-      <AppHeader />
       <main className="flex min-h-screen flex-col items-center flex-start p-24">
         <section className="day-counter">
           <h2>처음 만난 날 200일째</h2>
@@ -41,10 +37,16 @@ export default function Home() {
             <LoyaltyIcon />
             오늘의 질문
           </h2>
-          <div>
-            <Link href="/question">
-              비오는 날은 주로 뭘 하며 시간을 보내나요?
-            </Link>
+          <div className="flex-col-center gap-10">
+            비오는 날은 주로 뭘 하며 시간을 보내나요?
+            <Button
+              variant="outlined"
+              // endIcon={<PersonAddIcon />}
+              onClick={() => router.push(`${prefix}/question`)}
+              color="inherit"
+            >
+              생각 나누기
+            </Button>
           </div>
         </section>
 
@@ -57,7 +59,7 @@ export default function Home() {
             <Button
               variant="outlined"
               // endIcon={<PersonAddIcon />}
-              onClick={() => router.push("/tarot/")}
+              onClick={() => router.push(`${prefix}/tarot`)}
               color="inherit"
             >
               지금 바로 카드 확인
@@ -65,7 +67,7 @@ export default function Home() {
           </div>
         </section>
       </main>
-      <AppFooter />
+
       <style jsx>{`
         h2 {
           padding: 0;
