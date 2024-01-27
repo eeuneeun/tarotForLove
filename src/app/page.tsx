@@ -93,7 +93,9 @@ export default function Home() {
           align-items: center;
           justify-content: center;
         }
-
+        section button {
+          cusor: pointer;
+        }
         .day-counter {
           width: 100%;
           height: 33.33333333333%;

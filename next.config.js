@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const FilterWarningsPlugin = require("webpack-filter-warnings-plugin");
 const debug = process.env.NODE_ENV !== "production";
-const repository = "portfolio";
+const repository = "tarotForLove";
 
 const nextConfig = {
   webpack: (config, { isServer }) => {
@@ -25,7 +25,7 @@ const nextConfig = {
     config.plugins.push(
       new FilterWarningsPlugin({
         exclude: /mini-css-extract-plugin[^]*Conflicting order between:/,
-      })
+      }),
     );
     config.resolve.modules.push(__dirname);
 
