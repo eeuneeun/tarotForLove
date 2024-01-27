@@ -100,14 +100,14 @@ export default function Question() {
   // 데이터베이스 연결
   function dbConnect(event: React.MouseEvent) {
     console.log(event);
-    dbHandler();
+    // dbHandler();
   }
   return (
     <>
       <main className="question flex min-h-screen flex-col items-center justify-between p-24">
         <section className="flex-col-center">
           <h2>N일째 질문</h2>
-          <p>서로를 좋아하게 된 계기는 무엇인가요?</p>
+          <p data-bobum="채소">서로를 좋아하게 된 계기는 무엇인가요?</p>
           <form
             className="flex-col-center"
             onSubmit={(event) => {

@@ -8,13 +8,13 @@ const conn = {
 };
 let db;
 
-export default async function dbHandler() {
+export default async function dbPool() {
   const mysql = require("mysql");
   try {
     const connection = mysql.createConnection(conn);
     db = await connection.connect();
 
-    console.log("db", db);
+    console.log("###################db", db);
   } catch (err) {
     console.error(err);
   }
